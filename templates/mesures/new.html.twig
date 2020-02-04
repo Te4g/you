@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Mesures{% endblock %}
+
+{% block body %}
+    <h1>Create new Mesures</h1>
+
+    {{ include('mesures/_form.html.twig') }}
+    <img src="/images/mesure_corps.gif" alt="mesures_corps">
+
+    <a class="btn btn-primary d-block" href="{{ path('mesures_index') }}">back to list</a>
+{% endblock %}

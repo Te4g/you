@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mesures{% endblock %}
+
+{% block body %}
+    <h1>Mesures</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ mesure.id }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ mesure.createdAt ? mesure.createdAt|date('d M Y') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Poids</th>
+                <td>{{ mesure.poids }}</td>
+            </tr>
+            <tr>
+                <th>Imc</th>
+                <td>{{ mesure.imc }}</td>
+            </tr>
+            <tr>
+                <th>Img</th>
+                <td>{{ mesure.img }}</td>
+            </tr>
+            <tr>
+                <th>Muscle</th>
+                <td>{{ mesure.muscle }}</td>
+            </tr>
+            <tr>
+                <th>Hydratation</th>
+                <td>{{ mesure.hydratation }}</td>
+            </tr>
+            <tr>
+                <th>DensiteOsseuse</th>
+                <td>{{ mesure.densiteOsseuse }}</td>
+            </tr>
+            <tr>
+                <th>Bmr</th>
+                <td>{{ mesure.bmr }}</td>
+            </tr>
+            <tr>
+                <th>TxProteine</th>
+                <td>{{ mesure.txProteine }}</td>
+            </tr>
+            <tr>
+                <th>AgeCorps</th>
+                <td>{{ mesure.ageCorps }}</td>
+            </tr>
+            <tr>
+                <th>GraisseViscerale</th>
+                <td>{{ mesure.graisseViscerale }}</td>
+            </tr>
+            <tr>
+                <th>GraisseSousCutanee</th>
+                <td>{{ mesure.graisseSousCutanee }}</td>
+            </tr>
+            <tr>
+                <th>PoidsNormal</th>
+                <td>{{ mesure.poidsNormal }}</td>
+            </tr>
+            <tr>
+                <th>ControlePoids</th>
+                <td>{{ mesure.controlePoids }}</td>
+            </tr>
+            <tr>
+                <th>GraisseCorporelle</th>
+                <td>{{ mesure.graisseCorporelle }}</td>
+            </tr>
+            <tr>
+                <th>PoidsSansGraisse</th>
+                <td>{{ mesure.poidsSansGraisse }}</td>
+            </tr>
+            <tr>
+                <th>PoidsMusculaire</th>
+                <td>{{ mesure.poidsMusculaire }}</td>
+            </tr>
+            <tr>
+                <th>QtyProteine</th>
+                <td>{{ mesure.qtyProteine }}</td>
+            </tr>
+            <tr>
+                <th>TourEpaule</th>
+                <td>{{ mesure.tourEpaule }}</td>
+            </tr>
+            <tr>
+                <th>TourPoitrine</th>
+                <td>{{ mesure.tourPoitrine }}</td>
+            </tr>
+            <tr>
+                <th>BicepsG</th>
+                <td>{{ mesure.bicepsG }}</td>
+            </tr>
+            <tr>
+                <th>BicepsD</th>
+                <td>{{ mesure.bicepsD }}</td>
+            </tr>
+            <tr>
+                <th>TourTaille</th>
+                <td>{{ mesure.tourTaille }}</td>
+            </tr>
+            <tr>
+                <th>CuisseG</th>
+                <td>{{ mesure.cuisseG }}</td>
+            </tr>
+            <tr>
+                <th>CuisseD</th>
+                <td>{{ mesure.cuisseD }}</td>
+            </tr>
+            <tr>
+                <th>MolletG</th>
+                <td>{{ mesure.molletG }}</td>
+            </tr>
+            <tr>
+                <th>MolletD</th>
+                <td>{{ mesure.molletD }}</td>
+            </tr>
+        </tbody>
+    </table>
+<div class="">
+    <a class="btn btn-primary" href="{{ path('mesures_index') }}">back to list</a>
+
+    <a class="btn btn-secondary" href="{{ path('mesures_edit', {'id': mesure.id}) }}">edit</a>
+
+    {{ include('mesures/_delete_form.html.twig') }}
+</div>
+{% endblock %}
